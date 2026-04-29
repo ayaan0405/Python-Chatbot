@@ -11,7 +11,7 @@ st.markdown("Ask a question based on the PDF you upload.")
 if os.path.exists("styles.css"):
     with open("styles.css") as f: st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-api_key = st.sidebar.text_input("Gemini API Key", type="password") or os.getenv("GEMINI_API_KEY", "AIzaSyBdCRTXSwGCGeomhMiVt7bAg2tnAlIOiBE")
+api_key = st.sidebar.text_input("Gemini API Key", type="password") or os.getenv("GEMINI_API_KEY", "")
 if not api_key:
     st.warning("Provide Gemini API key.")
     st.stop()
