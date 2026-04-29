@@ -1,0 +1,64 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+}
+
+.stApp {
+    background: var(--bg-gradient);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+}
+
+/* Glassmorphism containers */
+.stMarkdown, .stFileUploader, .stTextInput, .stButton {
+    /* Subtle container styling handled by Streamlit's internal classes mostly */
+}
+
+/* Custom Card Effect */
+div[data-testid="stVerticalBlock"] > div {
+    /* This targets Streamlit blocks but we need to stay careful */
+}
+
+/* Answer section styling */
+.answer-container {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+h1, h2, h3 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+}
+
+p, span, label {
+    color: var(--text-secondary) !important;
+}
+
+/* File Uploader styling */
+[data-testid="stFileUploader"] {
+    background: var(--card-bg);
+    border: 2px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* Input styling */
+input {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    color: white !important;
+}
